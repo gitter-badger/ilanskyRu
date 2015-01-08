@@ -1,0 +1,41 @@
+.env.*.php
+.env.php
+
+# Laravel
+/bootstrap
+/vendor
+/app/commands
+/app/config
+/app/database
+/app/lang
+/app/start
+/app/storage
+/app/tests
+_ide_helper.php
+artisan
+phpunit.xml
+server.php
+
+# Composer
+composer.phar
+composer.lock
+
+# OS
+.DS_Store
+.idea/
+vagrant
+.vagrant
+Thumbs.db
+
+# Packages
+_ide_helper.php
+
+# Public Site
+/public/index.php
+/public/upds
+/public/uploads
+/public/theme
+/public/libs/*.js
+/public/libs/angular
+/public/libs/jquery
+/public/packages
