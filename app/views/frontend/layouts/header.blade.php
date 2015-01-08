@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" ng-app="ilansky">
 <head>
     <!-- Basic -->
     <meta charset="utf-8">
@@ -11,8 +11,6 @@
     <meta name="description" content="{{ Options::get_option('description') }}">
     <meta name="author" content="Daniil V. Savenkoff (http://www.savenkoff.com/)">
     <meta name="csrf-token" content="<?php echo csrf_token(); ?>">
-
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Theme CSS -->
     <link href="theme/css/style.css" rel="stylesheet" media="screen">
@@ -20,13 +18,8 @@
     <link href="theme/css/theme-responsive.css" rel="stylesheet" media="screen">
     <!-- Skins Theme -->
     <link href="theme/css/skins/{{ Options::get_option('skin') }}.css" rel="stylesheet" media="screen" class="skin">
-
     <!-- Favicons -->
     <link rel="shortcut icon" href="theme/img/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="theme/img/icons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="theme/img/icons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="theme/img/icons/apple-touch-icon-114x114.png">
-
     <!-- Head Libs -->
     <script src="theme/js/modernizr.js"></script>
 
@@ -47,7 +40,7 @@
                     <!-- Logo-->
                     <div class="col-md-3 logo">
                         <a href="/" title="{{ Options::get_option('title') }}">
-                            <img src="theme/img/logo.png" alt="{{ Options::get_option('title') }}" class="logo_img">
+                            <img src="imgs/logos/logo_green.png" alt="{{ Options::get_option('title') }}" class="logo_img">
                         </a>
                     </div>
                     <!-- End Logo-->

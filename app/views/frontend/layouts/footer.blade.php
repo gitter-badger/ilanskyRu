@@ -154,9 +154,13 @@
 </div>
 <!-- End layout-->
 
-<!-- ======================= JQuery libs =========================== -->
-<!-- jQuery local-->
-<script src="theme/js/jquery.js"></script>
+<!-- ======================= Библиотеки сайта =========================== -->
+<!-- AngularJS -->
+<script src="libs/angular.min.js"></script>
+<!-- Ilansky AngularJS -->
+<script src="libs/ilansky/ilansky_app.js"></script>
+<!-- jQuery -->
+<script src="libs/jquery-1.11.2.min.js"></script>
 <!--Nav-->
 <script type="text/javascript" src="theme/js/nav/tinynav.js"></script>
 <script type="text/javascript" src="theme/js/nav/hoverIntent.js"></script>
@@ -169,16 +173,8 @@
 <!--Slide-->
 <script type="text/javascript" src="theme/js/slide/camera.js" ></script>
 <script type='text/javascript' src='theme/js/slide/jquery.easing.1.3.min.js'></script>
-<!-- Maps -->
-<script src="theme/js/maps/gmap3.js"></script>
 <!-- carousel.js нужна для галереи и главной-->
 <script src="theme/js/carousel/carousel.js"></script>
-<!-- Filter -->
-<script src="theme/js/filters/jquery.isotope.js" type="text/javascript"></script>
-<!-- Twitter Feed хз зачем, но нужен для работы главной, и галлереи пока не знаю как исправить v -->
-<script src="theme/js/twitter/jquery.tweet.js"></script>
-<!-- flickr  хз зачем, но нужен для работы главной, и галлереи пока не знаю как исправить -->
-<script src="theme/js/flickr/jflickrfeed.min.js"></script>
 <!-- Counter -->
 <script src="theme/js/counter/jquery.countdown.js"></script>
 <!-- Bootstrap.js-->
