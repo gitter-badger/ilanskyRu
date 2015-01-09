@@ -6,7 +6,7 @@
 <section class="content-info">
 
 <div class="semiboxshadow text-center">
-    <img src="theme/img/img-theme/shp.png" class="img-responsive" alt="">
+    <img src="imgs/theme/shp.png" class="img-responsive" alt="">
 </div>
 
 <!-- Dark Home -->
@@ -32,10 +32,9 @@
         <li>
             <div class="header-post">
                 <div class="date">
-                    <span>08/jan</span>
-                    2014
+                    <span>08/jan</span>2014
                 </div>
-                <a href="#"><img src="theme/img/blog/no-image.jpg" alt=""></a>
+                <a href="#"><img src="imgs/theme/no-image270x180_green.jpg" alt=""></a>
                 <div class="meta-tag">
                     <ul>
                         <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
@@ -58,30 +57,7 @@
                     <span>08/jan</span>
                     2014
                 </div>
-                <a href="#"><img src="theme/img/blog/no-image.jpg" alt=""></a>
-                <div class="meta-tag">
-                    <ul>
-                        <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
-                        <li><i class="fa fa-folder-open"></i><a href="#">Design</a></li>
-                        <li class="text-right"><i class="fa fa-comment"></i><a href="#">10</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="info-post">
-                <h4><a href="single-news.html">Title</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </li>
-        <!-- End Item blog post -->
-
-        <!-- Item blog post -->
-        <li>
-            <div class="header-post">
-                <div class="date">
-                    <span>08/jan</span>
-                    2014
-                </div>
-                <a href="#"><img src="theme/img/blog/no-image.jpg" alt=""></a>
+                <a href="#"><img src="imgs/theme/no-image270x180_green.jpg" alt=""></a>
                 <div class="meta-tag">
                     <ul>
                         <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
@@ -104,7 +80,7 @@
                     <span>08/jan</span>
                     2014
                 </div>
-                <a href="#"><img src="theme/img/blog/no-image.jpg" alt=""></a>
+                <a href="#"><img src="imgs/theme/no-image270x180_green.jpg" alt=""></a>
                 <div class="meta-tag">
                     <ul>
                         <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
@@ -127,7 +103,30 @@
                     <span>08/jan</span>
                     2014
                 </div>
-                <a href="#"><img src="theme/img/blog/no-image.jpg" alt=""></a>
+                <a href="#"><img src="imgs/theme/no-image270x180_green.jpg" alt=""></a>
+                <div class="meta-tag">
+                    <ul>
+                        <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
+                        <li><i class="fa fa-folder-open"></i><a href="#">Design</a></li>
+                        <li class="text-right"><i class="fa fa-comment"></i><a href="#">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-post">
+                <h4><a href="#">Title</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <!-- End Item blog post -->
+
+        <!-- Item blog post -->
+        <li>
+            <div class="header-post">
+                <div class="date">
+                    <span>08/jan</span>
+                    2014
+                </div>
+                <a href="#"><img src="imgs/theme/no-image270x180_green.jpg" alt=""></a>
                 <div class="meta-tag">
                     <ul>
                         <li><i class="fa fa-user"></i><a href="#">Admin</a></li>
@@ -151,11 +150,10 @@
 <div class="tab-pane" id="players-staff">
     <h3>V.I.P Пользователи</h3>
     <!-- Item Players-->
-    <ul id="players-carousel" class="players ">
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+    <ul id="vip-users-carousel" class="players">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -163,12 +161,10 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
 
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -176,12 +172,10 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
 
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -189,12 +183,10 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
 
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -202,12 +194,10 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
 
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -215,12 +205,10 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
 
-        <!-- Item Player -->
-        <li class="item-player">
-            <img src="theme/img/players/5.jpg" alt="" class="img-responsive">
-            <div class="info-player">
+        <li class="item-dossier">
+            <img src="imgs/theme/no-avatar250x350_green.png" alt="" class="img-responsive">
+            <div class="info-dossier">
                 <h4><a href="#">User</a></h4>
                 <h5><span>V.I.P</span></h5>
                 <div class="overlay-player">
@@ -228,7 +216,6 @@
                 </div>
             </div>
         </li>
-        <!-- End Player post -->
     </ul>
     <!-- End Item Players-->
 </div>
@@ -245,7 +232,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club 1</a></h4>
@@ -259,7 +246,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -273,7 +260,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -287,7 +274,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -305,7 +292,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -319,7 +306,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -333,7 +320,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -347,7 +334,7 @@
             <div class="col-sx-12 col-sm-6 col-md-6">
                 <div class="item-clubs">
                     <div class="img-clubs">
-                        <img src="theme/img/clubs-team/1.png" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="info-clubs">
                         <h4><a href="#">Club</a></h4>
@@ -416,7 +403,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="img-hover">
-                        <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                         <div class="overlay"><a href="#">+</a></div>
                     </div>
                 </div>
@@ -434,7 +421,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="img-hover">
-                        <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                         <div class="overlay"><a href="#">+</a></div>
                     </div>
                 </div>
@@ -452,7 +439,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="img-hover">
-                        <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                         <div class="overlay"><a href="#">+</a></div>
                     </div>
                 </div>
@@ -470,7 +457,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="img-hover">
-                        <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                        <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                         <div class="overlay"><a href="#">+</a></div>
                     </div>
                 </div>
@@ -566,21 +553,21 @@
         <!-- Locations Carousel -->
         <ul class="single-carousel">
             <li>
-                <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                 <div class="info-single-carousel">
                     <h4>Board</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
             </li>
             <li>
-                <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                 <div class="info-single-carousel">
                     <h4>Board</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
             </li>
             <li>
-                <img src="theme/img/blog/no-image.jpg" alt="" class="img-responsive">
+                <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                 <div class="info-single-carousel">
                     <h4>Board</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>

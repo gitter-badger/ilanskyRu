@@ -1,7 +1,7 @@
 <!-- Slide -->
 <section class="camera_wrap camera_white_skin" id="slide">
     <!-- Item Slide - Caption -->
-    <div  data-src="theme/img/slide/slides/1.jpg">
+    <div  data-src="imgs/demo/slides/1.jpg">
         <div class="style-caption fadeFromTop">
             <div class="overlay-bg"></div>
             <div class="container">
@@ -22,7 +22,7 @@
     <!-- End Item Slide - Caption  -->
 
     <!-- Item Slide - Caption -->
-    <div  data-src="theme/img/slide/slides/2.jpg">
+    <div  data-src="imgs/demo/slides/2.jpg">
         <div class="style-caption fadeFromTop">
             <div class="overlay-bg"></div>
             <div class="container">
@@ -43,7 +43,7 @@
     <!-- End Item Slide - Caption  -->
 
     <!-- Item Slide - Caption -->
-    <div  data-src="theme/img/slide/slides/3.jpg">
+    <div  data-src="imgs/demo/slides/3.jpg">
         <div class="style-caption fadeFromTop">
             <div class="overlay-bg"></div>
             <div class="container">

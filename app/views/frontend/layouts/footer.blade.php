@@ -144,7 +144,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p><small>Версия сайта <b>0.1 beta</b>. Обо всех ошибках при работе сайта просьба сообщаять при помощи формы обратной связи.</small></p>
+                <p><small>Версия сайта <strong>0.1 beta</strong></small></p>
             </div>
         </div>
     </div>
@@ -161,6 +161,7 @@
 <script src="libs/ilansky/ilansky_app.js"></script>
 <!-- jQuery -->
 <script src="libs/jquery-1.11.2.min.js"></script>
+
 <!--Nav-->
 <script type="text/javascript" src="theme/js/nav/tinynav.js"></script>
 <script type="text/javascript" src="theme/js/nav/hoverIntent.js"></script>
@@ -184,24 +185,8 @@
 <!-- Обязательные на всех страницах -->
 <!--Ligbox-->
 <script type="text/javascript" src="theme/js/fancybox/jquery.fancybox.js"></script>
-<!-- Настройка Ligbox -->
-<script type="text/javascript">
-$(document).ready(function($) {
-
-'use strict';
-
-  $(".fancybox").fancybox({
-      openEffect  : 'elastic',
-      closeEffect : 'elastic',
-
-      helpers : {
-        title : {
-          type : 'inside'
-        }
-      }
-  });
-});
-</script>
+<!-- Ilansky jQuery -->
+<script src="libs/ilansky/ilansky_js.js"></script>
 <!-- Суб-функционал, разделённый по разделам -->
 @yield('js-footer')
 <!-- ======================= End JQuery libs =========================== -->
