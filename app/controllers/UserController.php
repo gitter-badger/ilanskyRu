@@ -46,10 +46,6 @@ class UserController extends BaseController {
             return Redirect::route('edit-profile')->with('success','Профиль успешно сохранён.');
         }
     }
-    # Показать форму регистрации пользовател
-    public function getRegister() {
-        return View::make('frontend.users.register');
-    }
     # Показать форму авторизации пользователя
     public function getLogin($redirect = null) {
         return View::make('frontend.users.login',array(

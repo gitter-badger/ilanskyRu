@@ -481,56 +481,56 @@
         <div class="row">
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
                 <div class="box-info">
-                    <img src="theme/img/experts/1.png" alt="" class="img-responsive">
+                    <img src="imgs/theme/no-image270x180_green.jpg" alt="" class="img-responsive">
                     <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
                     <p class="date-box">Abril 15, 2014</p>
                 </div>
@@ -647,7 +647,7 @@
     <!-- Adds Sidebar -->
     <div class="panel-box">
         <a href="#" target="_blank">
-            <img src="theme/img/adds/sidebar.png" class="img-responsive" alt="">
+            <img src="imgs/rkl/sidebar163x504_green.png" class="img-responsive" alt="">
         </a>
     </div>
     <!-- End Adds Sidebar -->
@@ -690,7 +690,6 @@
                         </div>
                     </div>
                 </form>
-                <div id="result-newsletter"></div>
             </div>
         </div>
     </div>
@@ -698,4 +697,19 @@
 <!-- End Newsletter -->
 </section>
 <!-- End Section Area -  Content Central -->
+@stop
+@section('js-footer')
+    <!-- Слайдер -->
+    <script type="text/javascript" src="theme/js/slide/camera.js" ></script>
+    <script type='text/javascript' src='theme/js/slide/jquery.easing.1.3.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function($) {
+
+            'use strict';
+
+            $('#slide').camera({
+                height: 'auto'
+            });
+        });
+    </script>
 @stop

@@ -27,6 +27,7 @@ Route::filter('acl',function() {
     $route_path  = Route::getCurrentRoute()->getPath();
     $route_uses = Route::getCurrentRoute()->getActionName();
     $route_type = Route::getCurrentRoute()->getMethods();
+    #$route_rname = Route::getCurrentRoute()->getAction()['name'];@
     #print_r($route_type);
     ###########################
     # Добавить бы нам маршрут в табличку в случае его отсутствия

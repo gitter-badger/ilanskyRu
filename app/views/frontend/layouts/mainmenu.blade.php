@@ -4,7 +4,7 @@
         <!-- Menu-->
         <ul class="sf-menu" id="menu">
             <li class="selected">
-                <a href="{{{ route('index') }}}">Главная</a>
+                <a href="{{{ route('get-index') }}}">Главная</a>
             </li>
             <!--
             <li class="current">
@@ -125,7 +125,7 @@
                         <a href="{{{ route('user-login') }}}">Авторизация</a>
                     </li>
                     <li>
-                        <a href="{{{ route('user-register') }}}">Регистрация</a>
+                        <a href="{{{ route('get-user-register') }}}">Регистрация</a>
                     </li>
                     @endunless
                     @unless(Auth::guest())

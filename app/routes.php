@@ -10,33 +10,75 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-###########################
-# Глобальный фильтр
-###########################
+############################################################
+# Глобальные фильтры
+############################################################
 Route::when('*','acl');
-###########################
-# AJAX
-###########################
-Route::group(array('prefix' => 'upload'), function() {
-    Route::post('/addimgs/',
-        [
-            'as'    =>  'ajax-images-upload',
-            'uses'  =>  'GalleryController@AjaxUpload'
-        ])->before('csrf-ajax');
-    Route::post('/delimgs',
-        [
-            'as'    =>  'ajax-images-delete',
-            'uses'  =>  'GalleryController@AjaxDelete'
-        ]);
-});
-###########################
+Route::pattern('id','[0-9]+');
+############################################################
+# Публичная часть
+############################################################
+
 # Главная страница
 ###########################
 Route::get('/',
     [
-        'as'    =>  'index',
-        'uses'  =>  'IndexController@index'
+        'as'    =>  'get-index',
+        'rus'   =>  'Публичная часть -> Главная страница',
+        'uses'  =>  'PindexController@getIndex'
     ]);
+
+# Пользователь
+###########################
+Route::group(array('prefix' => 'user'),function() {
+    # Регистрация нового пользователя
+    Route::get('register',
+        [
+            'as'    =>  'get-user-register',
+            'rus'   =>  'Публичная часть -> Регистрация пользователя',
+            'uses'  =>  'PuserController@getRegister'
+        ])->before('guest');
+    # Обработка формы регистрации нового пользователя
+    Route::post('register',
+        [
+            'as'    =>  'post-user-register',
+            'rus'   =>  'Публичная часть -> Регистрация пользователя -> Обработка',
+            'uses'  => 'UserController@postRegister'
+        ])->before('csrf');
+});
+############################################################
+# API для AngularJS
+############################################################
+Route::group(array('prefix' => 'api'), function() {
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###########################
 # Почти универсальная загрузка файлов
 ###########################
@@ -59,17 +101,6 @@ Route::group(array('prefix' => 'user'),function() {
     Route::post('login/{redirect?}',
         [
             'uses'   => 'UserController@postLogin'
-        ])->before('csrf');
-    # Показать форму регистрации пользователя
-    Route::get('register',
-        [
-            'as'    => 'user-register',
-            'uses'  => 'UserController@getRegister'
-        ])->before('guest');
-    # Обработать форму регистрации пользователя
-    Route::post('register',
-        [
-            'uses' => 'UserController@postRegister'
         ])->before('csrf');
     # Выход пользователя из системы
     Route::get('logout',

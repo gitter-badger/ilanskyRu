@@ -5,9 +5,9 @@
  * Date: 28.09.14
  * Time: 23:51
  */
-class IndexController extends BaseController {
+class PindexController extends BaseController {
     #Вывод главной страницы
-    public function index() {
+    public function getIndex() {
         return View::make('frontend.index');
     }
     #Скачивание файла со скрытием пути оригинального месторасположения

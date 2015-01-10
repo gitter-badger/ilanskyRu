@@ -31,4 +31,11 @@ $(document).ready(function($) {
         }
     });
 
+    /* Скролл */
+
+    $().UItoTop({
+        scrollSpeed:500,
+        easingType:'linear'
+    });
+
 });

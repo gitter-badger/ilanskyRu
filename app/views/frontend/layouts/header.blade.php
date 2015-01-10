@@ -6,11 +6,11 @@
     <title>
         @if ($__env->yieldContent('title') != '') @yield('title') |  @endif {{ Options::get_option('title') }}
     </title>
-    <base href="{{{ route('index') }}}">
+    <base href="{{{ route('get-index') }}}">
     <meta name="keywords" content="{{ Options::get_option('keywords') }}" />
     <meta name="description" content="{{ Options::get_option('description') }}">
     <meta name="author" content="Daniil V. Savenkoff (http://www.savenkoff.com/)">
-    <meta name="csrf-token" content="<?php echo csrf_token(); ?>">
+    <meta name="csrf-token" ng-init="csrf_token = <?php echo csrf_token(); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/ilansky.css" rel="stylesheet" media="screen">
     <!-- Цветовая тема -->

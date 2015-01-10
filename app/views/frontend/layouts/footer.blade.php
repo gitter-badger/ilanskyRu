@@ -127,7 +127,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <p>&copy; Daniil V. Savenkoff 2014</p>
+                <p>&copy; Daniil V. Savenkoff 2015</p>
             </div>
             <div class="col-md-7">
                 <!-- Nav Footer-->
@@ -157,24 +157,25 @@
 <!-- ======================= Библиотеки сайта =========================== -->
 <!-- AngularJS -->
 <script src="libs/angular.min.js"></script>
+<script src="libs/angular/angular-messages.min.js"></script>
 <!-- Ilansky AngularJS -->
+<script src="libs/ilansky/ilansky_app_controllers.js"></script>
 <script src="libs/ilansky/ilansky_app.js"></script>
 <!-- jQuery -->
 <script src="libs/jquery-1.11.2.min.js"></script>
+<!--PlugIns-->
+<script src="libs/jquery/jquery.ui.totop.js" type="text/javascript"></script>
+
 
 <!--Nav-->
 <script type="text/javascript" src="theme/js/nav/tinynav.js"></script>
 <script type="text/javascript" src="theme/js/nav/hoverIntent.js"></script>
 <script type="text/javascript" src="theme/js/nav/superfish.js"></script>
 <script src="theme/js/nav/jquery.sticky.js" type="text/javascript"></script>
-<!--Totop-->
-<script type="text/javascript" src="theme/js/totop/jquery.ui.totop.js" ></script>
+
 <!--Accorodion-->
 <script type="text/javascript" src="theme/js/accordion/accordion.js" ></script>
-<!--Slide-->
-<script type="text/javascript" src="theme/js/slide/camera.js" ></script>
-<script type='text/javascript' src='theme/js/slide/jquery.easing.1.3.min.js'></script>
-<!-- carousel.js нужна для галереи и главной-->
+<!-- carousel -->
 <script src="theme/js/carousel/carousel.js"></script>
 <!-- Counter -->
 <script src="theme/js/counter/jquery.countdown.js"></script>
@@ -182,7 +183,6 @@
 <script type="text/javascript" src="theme/js/bootstrap/bootstrap.js"></script>
 <!--MAIN FUNCTIONS-->
 <script type="text/javascript" src="theme/js/main.js"></script>
-<!-- Обязательные на всех страницах -->
 <!--Ligbox-->
 <script type="text/javascript" src="theme/js/fancybox/jquery.fancybox.js"></script>
 <!-- Ilansky jQuery -->

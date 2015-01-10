@@ -1,4 +1,4 @@
-@extends('layouts.blocks')
+@extends('frontend.layouts.blocks')
 @section('title')
 Регистрация
 @stop
@@ -11,12 +11,12 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                @include('layouts.alerts')
+                @include('frontend.layouts.alerts')
                 <!-- Форма авторизации -->
-                {{ Form::open(array('route' => 'user-register')) }}
-                <div class="form-group">
+                {{ Form::open(array('route' => 'post-user-register','name' => 'frmReg','ng-controller' => 'UserRegisterCtrl')) }}
+                <div class="form-group" ng-class="{'has-error': frmReg.email.$invalid && frmReg.email.$dirty}">
                     {{ Form::label('email', 'Адрес электронной почты') }}
-                    {{ Form::email('email','',array('class' => 'form-control','placeholder' => 'Введите адрес электронной почты', 'required' => 'required')) }}
+                    {{ Form::email('email','',array('class' => 'form-control','ng-model' => 'email','placeholder' => 'Введите адрес электронной почты', 'required' => 'required')) }}
                     {{ $errors->first('email') }}
                 </div>
                 <div class="form-group">
@@ -44,7 +44,7 @@
                         Ошибка ввода кода безопасности
                     @endif
                 </div>
-                {{ Form::submit('Зарегистрироваться', array('class' => 'btn btn-lg btn-primary')) }}
+                {{ Form::submit('Зарегистрироваться', array('class' => 'btn btn-lg btn-primary','ng-disabled' => 'frmReg.$invalid')) }}
                 {{ Form::close() }}
                 <br />
                 <p><i class="fa fa-info"></i> Уже зарегистрированы? Пройдите <a href="{{{ route('user-login') }}}">авторизацию</a> и используйте все возможности сайта полностью!</p>
@@ -53,6 +53,6 @@
     </div>
     <!-- End Widget Text-->
 </div>
-@include('users.sidebars.register')
+@include('frontend.users.sidebars.register')
 <!-- End Section Area - Content Central -->
 @stop
