@@ -13,10 +13,12 @@
             <div class="col-md-12">
                 @include('frontend.layouts.alerts')
                 <!-- Форма авторизации -->
-                {{ Form::open(array('route' => 'post-user-register','name' => 'frmReg','ng-controller' => 'UserRegisterCtrl')) }}
-                <div class="form-group" ng-class="{'has-error': frmReg.email.$invalid && frmReg.email.$dirty}">
-                    {{ Form::label('email', 'Адрес электронной почты') }}
+                {{ Form::open(array('route' => 'post-user-register','class' => 'form-theme', 'name' => 'frmReg','ng-controller' => 'UserRegisterCtrl')) }}
+                <div class="form-group" ng-class="{'has-error': frmReg.email.$invalid && frmReg.email.$dirty, 'has-success': frmReg.email.$valid}">
+                    {{ Form::label('email', 'Адрес электронной почты:') }}
+                    <span class="text-danger" ng-show="frmReg.email.$error.required">*</span>
                     {{ Form::email('email','',array('class' => 'form-control','ng-model' => 'email','placeholder' => 'Введите адрес электронной почты', 'required' => 'required')) }}
+
                     {{ $errors->first('email') }}
                 </div>
                 <div class="form-group">

@@ -160,6 +160,8 @@
 <script src="libs/angular/angular-messages.min.js"></script>
 <!-- Ilansky AngularJS -->
 <script src="libs/ilansky/ilansky_app_controllers.js"></script>
+<script src="libs/ilansky/ilansky_app_directives.js"></script>
+<script src="libs/ilansky/ilansky_app_services.js"></script>
 <script src="libs/ilansky/ilansky_app.js"></script>
 <!-- jQuery -->
 <script src="libs/jquery-1.11.2.min.js"></script>

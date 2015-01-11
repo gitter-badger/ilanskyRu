@@ -647,7 +647,7 @@
     <!-- Adds Sidebar -->
     <div class="panel-box">
         <a href="#" target="_blank">
-            <img src="imgs/rkl/sidebar163x504_green.png" class="img-responsive" alt="">
+            <img src="imgs/rkl/banner160x600_green.png" class="img-responsive" alt="">
         </a>
     </div>
     <!-- End Adds Sidebar -->
