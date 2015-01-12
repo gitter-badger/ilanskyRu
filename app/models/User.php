@@ -23,6 +23,57 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     );
     protected $softDelete = true;
 
+    ############################
+    # 2.0 Реализация модели
+    ############################
+    public static $AjaxCheckEmail = array(
+        'email'     => array(
+            'required',
+            'between:6,60',
+            'email',
+            'unique:users'
+        )
+    );
+    public static $PostRegValid = array(
+        'username'  => array(
+            'required',
+            'between:3,40',
+            'unique:users',
+            'regex:/^[A-Za-z0-9]/'
+        ),
+        'email'     => array(
+            'required',
+            'between:6,60',
+            'email',
+            'unique:users'
+        )
+    );
+
+    ############################
+    # END 2.0 Реализация модели
+    ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function roles() {
         return $this->belongsToMany('Role')->withTimestamps();
     }

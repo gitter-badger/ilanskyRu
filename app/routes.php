@@ -49,8 +49,9 @@ Route::group(array('prefix' => 'user'),function() {
 ############################################################
 # API для AngularJS
 ############################################################
-Route::group(array('prefix' => 'api'), function() {
-
+Route::group(array('prefix' => 'api','before' => 'csrf-ajax'), function() {
+    # API пользователей
+    Route::controller('user',"JuserController");
 });
 
 

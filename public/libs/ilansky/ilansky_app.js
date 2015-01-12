@@ -9,8 +9,3 @@ var ilansky = angular.module('ilansky',["ilansky.controllers","ilansky.directive
 ilansky.config(["$httpProvider", function($httpProvider) {
     $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content');
 }]);
-
-ilansky.constant("validationClassConfig", {
-    validClass: "has-success",
-    invalidClass: "has-error"
-});

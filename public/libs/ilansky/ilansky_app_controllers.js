@@ -3,8 +3,8 @@
  */
 'use strict';
 
-var ilnCtrl = angular.module('ilansky.controllers',[]);
+var ilnCtrl = angular.module('ilansky.controllers',["ngMessages"]);
 /* Контроллер регистрации пользователя */
-ilnCtrl.controller("UserRegisterCtrl", ["$scope", "$http","$timeout", function($scope, $http, $timeout) {
-    console.log('Open UserRegisterCtrl');
+ilnCtrl.controller("UserRegisterCtrl", ["$scope", function($scope) {
+
 }]);
