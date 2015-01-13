@@ -34,20 +34,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             'unique:users'
         )
     );
-    public static $PostRegValid = array(
+    public static $AjaxCheckUsername = array(
         'username'  => array(
             'required',
             'between:3,40',
             'unique:users',
             'regex:/^[A-Za-z0-9]/'
-        ),
-        'email'     => array(
-            'required',
-            'between:6,60',
-            'email',
-            'unique:users'
         )
     );
+
+    public static function postRegValid() {
+        $rules = array();
+        $rules =  $rules
+            + self::$AjaxCheckEmail
+            + self::$AjaxCheckUsername;
+        return $rules;
+    }
 
     ############################
     # END 2.0 Реализация модели
