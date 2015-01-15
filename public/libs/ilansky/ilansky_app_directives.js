@@ -6,30 +6,27 @@
 var ilnDrct = angular.module('ilansky.directives',[]);
 
 /* Валидатор E-mail дреса */
-ilnDrct.directive('emailValidator', ["$http", "$timeout", function($http,$timeout) {
+ilnDrct.directive('serverValidator', ["$http", function($http) {
     return {
-        scope: true,
-        require: '?ngModel',
+        require: 'ngModel',
         link: function(scope, elem, attr, ngModel) {
             if (!ngModel) return;
-            var apiUrl = attr.emailValidator;
-
-            function recAvitable(bool) {
-                ngModel.$setValidity('recAvailable',bool);
+            var apiUrl = attr.serverValidator;
+            function serverError(bool) {
+                ngModel.$setValidity('serverError',bool);
             }
             ngModel.$parsers.push(function(value) {
-                if (!value || value.length == 0) {
+                if (value == undefined || value == null || value.length == 0) {
                     return value;
                 }
-                recAvitable(false);
+                serverError(true);
                 $http.post(apiUrl,{
-                    email: value
-                }).success(function(data, status, headers, config) {
-                    console.log(status);
-                    recAvitable(true);
-                }).error(function(data, status, headers, config) {
-                    console.log(status);
-                    recAvitable(false);
+                    value: value
+                }).success(function() {
+                    serverError(true);
+                }).error(function() {
+                    serverError(false);
+                    return undefined;
                 });
                 return value;
             });

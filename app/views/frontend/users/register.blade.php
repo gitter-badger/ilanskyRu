@@ -16,23 +16,24 @@
                 {{ Form::open(array('route' => 'post-user-register','class' => 'form-theme', 'name' => 'frmReg','ng-controller' => 'UserRegisterCtrl', 'novalidate')) }}
                 <div class="form-group" ng-class="{'has-error': frmReg.email.$invalid && frmReg.email.$dirty, 'has-success': frmReg.email.$valid}">
                     {{ Form::label('email', 'Адрес электронной почты:') }}
-                    {{ Form::email('email','',array('class' => 'form-control','ng-model' => 'user.email','placeholder' => 'Введите адрес электронной почты', 'required', 'email-validator' => 'api/user/check-email/"')) }}
+                    {{ Form::email('email','',array('class' => 'form-control','ng-model' => 'user.email','placeholder' => 'Введите адрес электронной почты', 'minlength' => 6, 'maxlength' => 60, 'autocomplete' => 'email', 'required', 'server-validator' => 'api/user/check-email/')) }}
                     {{ $errors->first('email') }}
                     <div ng-messages="frmReg.email.$error" ng-messages-include="templates/form-messages.tpl"></div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{'has-error': frmReg.username.$invalid && frmReg.username.$dirty, 'has-success': frmReg.username.$valid}">
                     {{ Form::label('username', 'Имя пользователя') }}
-                    {{ Form::text('username','',array('class' => 'form-control','placeholder' => 'Введите имя пользователя', 'required' => 'required')) }}
+                    {{ Form::text('username','',array('class' => 'form-control','ng-model' => 'user.username','placeholder' => 'Введите имя пользователя', 'minlength' => 3, 'maxlength' => 40, 'autocomplete' => 'username', 'required', 'server-validator' => 'api/user/check-user/')) }}
                     {{ $errors->first('username') }}
+                    <div ng-messages="frmReg.username.$error" ng-messages-include="templates/form-messages.tpl"></div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{'has-error': frmReg.password.$invalid && frmReg.password.$dirty, 'has-success': frmReg.password.$valid}">
                     {{ Form::label('password', 'Пароль') }}
-                    {{ Form::password('password',array('class' => 'form-control','placeholder' => 'Введите пароль', 'required' => 'required')) }}
+                    {{ Form::password('password',array('class' => 'form-control','ng-model' => 'user.password','placeholder' => 'Введите пароль', 'required')) }}
                     {{ $errors->first('password') }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('password_confirmation', 'Подтверждение пароля') }}
-                    {{ Form::password('password_confirmation',array('class' => 'form-control','placeholder' => 'Введите подтверждение пароля', 'required' => 'required')) }}
+                    {{ Form::password('password_confirmation',array('class' => 'form-control','placeholder' => 'Введите подтверждение пароля', 'required')) }}
                     {{ $errors->first('password_confirmation') }}
                 </div>
                 <div class="form-group">

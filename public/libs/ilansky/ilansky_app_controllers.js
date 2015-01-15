@@ -5,6 +5,4 @@
 
 var ilnCtrl = angular.module('ilansky.controllers',["ngMessages"]);
 /* Контроллер регистрации пользователя */
-ilnCtrl.controller("UserRegisterCtrl", ["$scope", function($scope) {
-
-}]);
+ilnCtrl.controller("UserRegisterCtrl", ["$scope", function($scope) {}]);

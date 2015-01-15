@@ -26,6 +26,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     ############################
     # 2.0 Реализация модели
     ############################
+
+    ######
+    # Валидации
+    ######
     public static $AjaxCheckEmail = array(
         'email'     => array(
             'required',
@@ -49,6 +53,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             + self::$AjaxCheckEmail
             + self::$AjaxCheckUsername;
         return $rules;
+    }
+    ######
+    # Связи
+    ######
+
+    ######
+    # Функции
+    ######
+
+    public static function AjaxChek($field, $value, $rules) {
+        $arr[$field] = $value;
+        $v = Validator::make($arr,$rules);
+        if ($v->passes()) {
+            return Response::json(array('ok'),200);
+        }
+        return Response::json(array('error'),400);
     }
 
     ############################
