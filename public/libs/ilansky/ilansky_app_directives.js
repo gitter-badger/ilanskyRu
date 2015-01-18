@@ -5,7 +5,7 @@
 
 var ilnDrct = angular.module('ilansky.directives',[]);
 
-/* Валидатор E-mail дреса */
+/* Валидатор API */
 ilnDrct.directive('serverValidator', ["$http", function($http) {
     return {
         require: 'ngModel',
@@ -30,6 +30,24 @@ ilnDrct.directive('serverValidator', ["$http", function($http) {
                 });
                 return value;
             });
+        }
+    }
+}]);
+/* Валидатор пароля */
+ilnDrct.directive('passwordValidator', [function() {
+    return {
+        require: 'ngModel',
+        scope: {
+            otherModelValue: "=passwordValidator"
+        },
+        link: function(scope, elem, attr, ngModel) {
+            ngModel.$validators.passwordValidator = function(modevValue) {
+                return modevValue == scope.otherModelValue;
+            };
+
+            scope.$watch("otherModelValue", function () {
+                ngModel.$validate();
+            })
         }
     }
 }]);

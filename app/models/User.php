@@ -30,7 +30,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     ######
     # Валидации
     ######
-    public static $AjaxCheckEmail = array(
+    public static $ValidationEmail = array(
         'email'     => array(
             'required',
             'between:6,60',
@@ -38,7 +38,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             'unique:users'
         )
     );
-    public static $AjaxCheckUsername = array(
+    public static $ValidationUsername = array(
         'username'  => array(
             'required',
             'between:3,40',
@@ -46,12 +46,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             'regex:/^[A-Za-z0-9]/'
         )
     );
-
+    public static $ValidationPassword = array(
+        'password'  => array(
+            'required',
+            'confirmed',
+            'min:6'
+        )
+    );
+    public static $ValidatorCaptcha = array(
+        'captcha'   => array(
+            'required',
+            'captcha'
+        )
+    );
     public static function postRegValid() {
         $rules = array();
         $rules =  $rules
-            + self::$AjaxCheckEmail
-            + self::$AjaxCheckUsername;
+            + self::$ValidationEmail
+            + self::$ValidationUsername;
         return $rules;
     }
     ######

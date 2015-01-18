@@ -28,23 +28,26 @@
                 </div>
                 <div class="form-group" ng-class="{'has-error': frmReg.password.$invalid && frmReg.password.$dirty, 'has-success': frmReg.password.$valid}">
                     {{ Form::label('password', 'Пароль') }}
-                    {{ Form::password('password',array('class' => 'form-control','ng-model' => 'user.password','placeholder' => 'Введите пароль', 'required')) }}
+                    {{ Form::password('password',array('class' => 'form-control','ng-model' => 'user.password','placeholder' => 'Введите пароль', 'minlength' => 6, 'required')) }}
                     {{ $errors->first('password') }}
+                    <div ng-messages="frmReg.password.$error" ng-messages-include="templates/form-messages.tpl"></div>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{'has-error': frmReg.password_confirmation.$invalid && frmReg.password_confirmation.$dirty, 'has-success': frmReg.password_confirmation.$valid}">
                     {{ Form::label('password_confirmation', 'Подтверждение пароля') }}
-                    {{ Form::password('password_confirmation',array('class' => 'form-control','placeholder' => 'Введите подтверждение пароля', 'required')) }}
+                    {{ Form::password('password_confirmation',array('class' => 'form-control','ng-model' => 'user.password_confirmation','placeholder' => 'Введите подтверждение пароля', 'minlength' => 6, 'required', 'password-validator' => 'user.password')) }}
                     {{ $errors->first('password_confirmation') }}
+                    <div ng-messages="frmReg.password_confirmation.$error" ng-messages-include="templates/form-messages.tpl"></div>
                 </div>
-                <div class="form-group">
+                <div class="form-group"  ng-class="{'has-error': frmReg.captcha.$invalid && frmReg.captcha.$dirty, 'has-success': frmReg.captcha.$valid}">
                     {{ Form::label('captcha', 'Код безопастности') }}
                     <br/>
                     {{ HTML::image(Captcha::url()) }}
                     <br/><br/>
-                    {{ Form::text('captcha','',array('class' => 'form-control','placeholder' => 'Введите код безопасности', 'required' => 'required')) }}
+                    {{ Form::text('captcha','',array('class' => 'form-control','ng-model' => 'user.captcha', 'placeholder' => 'Введите код безопасности', 'minlength' => 5, 'maxlength' => 5, 'required')) }}
                     @if ($errors->first('captcha'))
                         Ошибка ввода кода безопасности
                     @endif
+                    <div ng-messages="frmReg.captcha.$error" ng-messages-include="templates/form-messages.tpl"></div>
                 </div>
                 {{ Form::submit('Зарегистрироваться', array('class' => 'btn btn-lg btn-primary','ng-disabled' => 'frmReg.$invalid')) }}
                 {{ Form::close() }}

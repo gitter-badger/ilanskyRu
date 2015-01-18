@@ -3,3 +3,4 @@
 <span ng-message="maxlength" class="help-block small">Слишком большое значение поля</span>
 <span ng-message="minlength" class="help-block small">Слишком маленькое значение поля</span>
 <span ng-message="serverError" class="help-block small">Сервер сообщил об ошибке значения</span>
+<span ng-message="passwordValidator" class="help-block small">Введенные пароли не совпадают</span>

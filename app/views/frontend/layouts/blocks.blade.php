@@ -20,10 +20,6 @@
         </div>
     </div>
 
-    <div class="semiboxshadow text-center">
-        <img src="theme/img/img-theme/shp.png" class="img-responsive" alt="">
-    </div>
-
     <!-- Content Central -->
     <div class="container padding-top">
         <div class="row">
