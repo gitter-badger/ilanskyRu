@@ -1,7 +1,5 @@
-<!-- jQuery Version 1.11.0 -->
-<script src="/theme/js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="/theme/js/bootstrap/bootstrap.js"></script>
+<script src="libs/jquery-1.11.2.min.js"></script>
+<script src="libs/jquery/bootstrap/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
 <script src="/theme/js/metisMenu/metisMenu.min.js"></script>
 
@@ -15,5 +13,4 @@
 <!-- Подгрузка -->
 @yield('js-footer')
 </body>
-
 </html>

@@ -6,13 +6,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/admin/">Daniil V. Savenkoff</a>
+    <a class="navbar-brand" href="{{ route('get-admin-panel') }}">Daniil V. Savenkoff</a>
 </div>
 <!-- /.navbar-header -->
 
 <ul class="nav navbar-top-links navbar-right">
 <li>
-    <a href="{{{ route('index') }}}" target="_blank"><i class="fa fa-external-link-square"></i></a>
+    <a href="{{ route('get-index') }}" target="_blank"><i class="fa fa-external-link-square"></i></a>
 </li>
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">

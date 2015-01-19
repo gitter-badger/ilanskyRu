@@ -74,7 +74,7 @@ class UserController extends BaseController {
                 null;
             }
             if (($redirect != Input::get('redirect')) or ($redirect == '')) {
-                return Redirect::route('index')->with('success','Вы успешно авторизированы на сайте.');
+                return Redirect::route('get-index')->with('success','Вы успешно авторизированы на сайте.');
             } else {
                 return Redirect::route($redirect)->with('success','Вы успешно авторизированы на сайте.');
             }
@@ -98,38 +98,6 @@ class UserController extends BaseController {
     public function LogOut() {
         Auth::logout();
         return Redirect::route('index')->with('success', 'Вы успешно вышли из системы.');
-    }
-    # Обработать форму регистрации пользователя
-    public function postRegister() {
-        $validator = Validator::make(Input::all(),User::getValidationRegister());
-        if ($validator->passes()) {
-            $user = new User();
-            $user->username         = Input::get('username');
-            $user->email            = Input::get('email');
-            $user->password         = Hash::make(Input::get('password'));
-            $user->activationCode   = $this->generateCode();
-            $user->isActive         = false;
-            $user->save();
-
-            # Присваиваем роль
-            $role_user  = Role::where('lat_name', '=', 'confirmation')->first();
-            $user->roles()->attach($role_user);
-
-            # Отправляем пиьсмо с активацией
-            $user->sendActivationMail();
-            # Выводим сообщение
-            return $this->getMessage('Регистрация почти завершена! Через пару минут, возможно раньше Вам на указанный адрес электронной придёт сообщение для подтверждения регистрации.');
-
-            #Auth::login($user);
-            #return Redirect::route('index')->with('success','Добро пожаловать на сайт, '. Auth::user()->username . '!');
-
-        }
-        else {
-            return Redirect::back()->with(
-                'error',
-                'При регистрации возникли ошибки'
-            )->withErrors($validator)->withInput();
-        }
     }
     # Работа со ссылкой активации пользователя
     function getActivate() {

@@ -53,7 +53,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             'min:6'
         )
     );
-    public static $ValidatorCaptcha = array(
+    public static $ValidationCaptcha = array(
         'captcha'   => array(
             'required',
             'captcha'
@@ -63,7 +63,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $rules = array();
         $rules =  $rules
             + self::$ValidationEmail
-            + self::$ValidationUsername;
+            + self::$ValidationUsername
+            + self::$ValidationPassword
+            + self::$ValidationCaptcha;
         return $rules;
     }
     ######
@@ -138,32 +140,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             'username' => 'required',
             'password' => 'required',
             'redirect' => 'regex:/^[a-z-]/'
-        );
-        return $validation;
-    }
-    # Валидация регистраии пользователя
-    public static function getValidationRegister() {
-        $validation = array(
-            'username'  => array(
-                'required',
-                'min:5',
-                'unique:users',
-                'regex:/^[A-Za-z0-9]/'
-            ),
-            'email'     => array(
-                'required',
-                'email',
-                'unique:users'
-            ),
-            'password'  => array(
-                'required',
-                'confirmed',
-                'min:6'
-            ),
-            'captcha'   => array(
-                'required',
-                'captcha'
-            )
         );
         return $validation;
     }

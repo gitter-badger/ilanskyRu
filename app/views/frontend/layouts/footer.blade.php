@@ -167,6 +167,7 @@
 <script src="libs/jquery-1.11.2.min.js"></script>
 <!--PlugIns-->
 <script src="libs/jquery/jquery.ui.totop.js" type="text/javascript"></script>
+<script src="libs/jquery/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 
 
 <!--Nav-->
@@ -181,8 +182,6 @@
 <script src="theme/js/carousel/carousel.js"></script>
 <!-- Counter -->
 <script src="theme/js/counter/jquery.countdown.js"></script>
-<!-- Bootstrap.js-->
-<script type="text/javascript" src="theme/js/bootstrap/bootstrap.js"></script>
 <!--MAIN FUNCTIONS-->
 <script type="text/javascript" src="theme/js/main.js"></script>
 <!--Ligbox-->

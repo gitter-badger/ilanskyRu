@@ -1,6 +1,6 @@
 @extends('backend.layouts.page')
 @section('title')
-    Панель управления
+Панель управления
 @stop
 @section('content')
 <!-- /.row -->
@@ -536,5 +536,4 @@
 <!-- /.col-lg-4 -->
 </div>
 <!-- /.row -->
-
 @stop

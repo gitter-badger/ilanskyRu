@@ -25,6 +25,7 @@ Route::get('/',
     [
         'as'    =>  'get-index',
         'rus'   =>  'Публичная часть -> Главная страница',
+        'access'=>  true,
         'uses'  =>  'PindexController@getIndex'
     ]);
 
@@ -36,6 +37,7 @@ Route::group(array('prefix' => 'user'),function() {
         [
             'as'    =>  'get-user-register',
             'rus'   =>  'Публичная часть -> Регистрация пользователя',
+            'access'=>  true,
             'uses'  =>  'PuserController@getRegister'
         ])->before('guest');
     # Обработка формы регистрации нового пользователя
@@ -43,7 +45,8 @@ Route::group(array('prefix' => 'user'),function() {
         [
             'as'    =>  'post-user-register',
             'rus'   =>  'Публичная часть -> Регистрация пользователя -> Обработка',
-            'uses'  => 'UserController@postRegister'
+            'access'=>  true,
+            'uses'  =>  'PuserController@postRegister'
         ])->before('csrf');
 });
 ############################################################
@@ -53,8 +56,19 @@ Route::group(array('prefix' => 'api','before' => 'csrf-ajax'), function() {
     # API пользователей
     Route::controller('user',"JuserController");
 });
-
-
+############################################################
+# Административная часть
+############################################################
+Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
+    # Главная страница
+    Route::get('/',
+        [
+            'as'    =>  'get-admin-panel',
+            'rus'   =>  'Админ-панель -> Главная страница',
+            'access'=>  false,
+            'uses'  =>  'AdminController@getIndex'
+        ]);
+});
 
 
 
@@ -204,12 +218,6 @@ Route::group(array('prefix' => 'dossier'), function() {
 # Административная часть
 ##########################
 Route::group(array('prefix' => 'admin', 'before' => 'auth'), function() {
-   # Главнгая страница админ-панели
-    Route::get('/',
-        [
-            'as'    => 'admin-panel',
-            'uses'  => 'AdminController@getIndex'
-        ]);
     ###################
     # Пользователи
     ###################

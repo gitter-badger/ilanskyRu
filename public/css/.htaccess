@@ -1,7 +1,7 @@
 Order allow,deny
 Deny from all
 
-<FilesMatch "\.(css)$|^$">
+<FilesMatch "\.(css|map)$|^$">
     Order deny,allow
     Allow from all
 </FilesMatch>

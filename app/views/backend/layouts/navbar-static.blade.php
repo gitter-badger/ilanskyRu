@@ -13,7 +13,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a class="active" href="{{{ route('admin-panel') }}}"><i class="fa fa-dashboard fa-fw"></i> Главная страница</a>
+                <a class="active" href="{{ route('get-admin-panel') }}"><i class="fa fa-dashboard fa-fw"></i> Главная страница</a>
             </li>
             <li>
                 <a href="{{{ route('admin-users') }}}"><i class="fa fa-users"></i> Пользователи и роли<span class="fa arrow"></span></a>

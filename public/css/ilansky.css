@@ -1,4 +1,11 @@
 @charset "utf-8";
 
+/* bootstrap.css */
+@import url("bootstrap/bootstrap.css");
+@import url("bootstrap/bootstrap-theme.css");
+
+/*Icons Font-Awesome*/
+@import url("font-awesome/font-awesome.min.css");
+
 @import url("../theme/css/style.css");
 @import url("../theme/css/theme-responsive.css");
